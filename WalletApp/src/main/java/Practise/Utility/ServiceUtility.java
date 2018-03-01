@@ -29,7 +29,7 @@ public class ServiceUtility
 	}
 
 	name = name.trim();
-	
+
 	if (name.isEmpty())
 	{
 	    throw new WalletException("Name cannot be empty");
@@ -55,6 +55,12 @@ public class ServiceUtility
 	return true;
     }
 
+    static public boolean isAmountValid(String amt)
+    {
+	BigDecimal amtDec = new BigDecimal(amt);
+	return isAmountValid(amtDec);
+    }
+
     static public boolean isMobileValid(String mobile)
     {
 	if (mobile == null)
@@ -75,7 +81,7 @@ public class ServiceUtility
 	{
 	    throw new WalletException("Invalid mobile number");
 	}
-	
+
 	return true;
     }
 }

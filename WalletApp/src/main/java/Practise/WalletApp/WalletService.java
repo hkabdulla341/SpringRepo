@@ -18,10 +18,10 @@ public class WalletService
 	ServiceUtility.isNameValid(name);
 	ServiceUtility.isAmountValid(amt);
 	ServiceUtility.isMobileValid(mobile);
-	
+
 	name = name.trim();
 
-	AccountDao existingAccount = aWalletServiceDao.find(mobile);
+	Account existingAccount = aWalletServiceDao.find(mobile);
 
 	if (!existingAccount.getName().equals("null"))
 	{
@@ -30,26 +30,81 @@ public class WalletService
 
 	Account newAcct = new Account(name, mobile, amt);
 	AccountDao newAcctDao = new AccountDao(newAcct);
-	
+
 	aWalletServiceDao.save(newAcct);
-	
+
 	return newAcctDao;
     }
-    
+
     public AccountDao showBalance(String mobile)
     {
 	ServiceUtility.isMobileValid(mobile);
-	
-	AccountDao foundAcct = aWalletServiceDao.find(mobile);
-	
-	if(foundAcct.getName().equals("null"))
+
+	Account foundAcct = aWalletServiceDao.find(mobile);
+
+	if (foundAcct.getName().equals("null"))
 	{
 	    throw new WalletException("Mobile number does not exist");
 	}
 	else
 	{
-	    return foundAcct;
+	    return new AccountDao(foundAcct);
 	}
     }
-    
+
+    public AccountDao deposit(String mobile, String amount)
+    {
+	ServiceUtility.isMobileValid(mobile);
+	ServiceUtility.isAmountValid(amount);
+
+	Account acc = aWalletServiceDao.find(mobile);
+
+	if (acc.getName().equals("null"))
+	{
+	    throw new WalletException("Mobile number does not exist");
+	}
+
+	BigDecimal totalBal = acc.getaWallet().getBalance().add(new BigDecimal(amount));
+
+	if (totalBal.compareTo(new BigDecimal("100000")) > 0)
+	{
+	    throw new WalletException("Maximum balance can only be 100000");
+	}
+	else
+	{
+	    acc = new Account(acc.getName(), acc.getMobile(), totalBal);
+	}
+
+	aWalletServiceDao.save(acc);
+
+	return new AccountDao(acc);
+    }
+
+    public AccountDao withdraw(String mobile, String amount)
+    {
+	ServiceUtility.isMobileValid(mobile);
+	ServiceUtility.isAmountValid(amount);
+
+	Account acc = aWalletServiceDao.find(mobile);
+
+	if (acc.getName().equals("null"))
+	{
+	    throw new WalletException("Mobile number does not exist");
+	}
+
+	BigDecimal totalBal = acc.getaWallet().getBalance().subtract(new BigDecimal(amount));
+
+	if (totalBal.compareTo(BigDecimal.ZERO) < 0)
+	{
+	    throw new WalletException("Insufficient funds for withdrawal");
+	}
+	else
+	{
+	    acc = new Account(acc.getName(), acc.getMobile(), totalBal);
+	}
+
+	aWalletServiceDao.save(acc);
+
+	return new AccountDao(acc);
+    }
 }

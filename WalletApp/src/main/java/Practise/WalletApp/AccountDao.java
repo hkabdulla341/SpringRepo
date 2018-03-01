@@ -1,5 +1,6 @@
 package Practise.WalletApp;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 public class AccountDao
@@ -46,8 +47,13 @@ public class AccountDao
 	return aWallet;
     }
 
-    public String getbalance()
+    public String display()
     {
 	return "Balance of account "+ mobile + " is " + aWallet.getBalance();
+    }
+    
+    public BigDecimal getWalletBalance()
+    {
+	return aWallet.getBalance();
     }
 }

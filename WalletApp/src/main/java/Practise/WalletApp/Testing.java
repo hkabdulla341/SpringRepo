@@ -17,29 +17,29 @@ public class Testing
 
     public void run()
     {
-	String arg1 = "John";
-	String arg2 = "12345678";
-	int arg3 = 100;
+	// String arg1 = "John";
+	String mobile = "22334466";
+	String amount = "50000";
+	String amount2 = "1000";
+	String name = "john";
 
-	walletService.createAccount(arg1, "" + arg2, new BigDecimal(arg3));
-	System.out.println("Created account with mobile number " + arg2 + ", name as " + arg1 + "with amount " + arg3);
+	walletService.createAccount(name, mobile, new BigDecimal(amount));
 
-	String number = "87654321";
-	
 	try
 	{
-	    walletService.showBalance("" + number);
+	    AccountDao acc = walletService.deposit(mobile, amount2);
+	    String message = acc.display();
+	    System.out.println(message);
+	    result = message.equals("Balance of account " + acc.getMobile() + " is " + acc.getWalletBalance());
 	}
 	catch (WalletException ex)
 	{
 	    String message = ex.getMessage();
-	    System.out.println("msg = " + message);
-	    result = message.equals("Mobile number does not exist");
+	    System.out.println(message);
+	    result = message.equals("Maximum balance can only be 100000");
 	}
-	finally
-	{
-	    System.out.println(result);
-	}
+
+	System.out.println(result);
     }
 
     public static void main(String[] args)

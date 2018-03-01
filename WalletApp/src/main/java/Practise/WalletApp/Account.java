@@ -22,7 +22,7 @@ public class Account
 	    this.aWallet = new Wallet(Integer.parseInt(mobile), amt);
 	}
     }
-
+    
     public UUID getAccountid()
     {
 	return accountid;
@@ -62,5 +62,5 @@ public class Account
     {
 	this.aWallet = aWallet;
     }
-
+    
 }

@@ -29,15 +29,15 @@ public class WalletServiceDao implements WalletRepo
 	}
     }
 
-    public AccountDao find(String mobile)
+    public Account find(String mobile)
     {
 	if (allAccounts.containsKey(mobile))
 	{
-	    return new AccountDao(allAccounts.get(mobile));
+	    return allAccounts.get(mobile);
 	}
 	else
 	{
-	    return new AccountDao(UUID.randomUUID(), "null", null, new WalletDao(new Wallet(0, new BigDecimal(0))));
+	    return new Account("null", "null", null);
 	}
     }
 
