@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ServletProject4ByHiddenTag">
+        <wb-resource deploy-path="/" source-path="/ServletProject4ByHiddenTag" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="ServletProject4ByHiddenTag"/>
+        <property name="java-output-path" value="/ServletProject4ByHiddenTag/build/classes"/>
+    </wb-module>
+</project-modules>
