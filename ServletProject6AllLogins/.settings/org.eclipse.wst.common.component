@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ServletProject6AllLogins">
+        <wb-resource deploy-path="/" source-path="/ServletProject6AllLogins" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="ServletProject6AllLogins"/>
+        <property name="java-output-path" value="/ServletProject6AllLogins/build/classes"/>
+    </wb-module>
+</project-modules>
