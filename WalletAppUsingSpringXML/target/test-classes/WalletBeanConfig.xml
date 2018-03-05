@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="walletService" class="Practise.WalletApp.WalletService"
+		scope="prototype"></bean>
+	<bean name="walletServiceDao" class="Practise.WalletApp.WalletServiceDao"
+		scope="prototype"></bean>
+
+	<bean name="initMap" class="Practise.WalletApp.WalletServiceDao">
+		<constructor-arg>
+			<map>
+				<entry key="12345678">
+					<bean class="Practise.WalletApp.Account">
+						<constructor-arg value="John"></constructor-arg>
+						<constructor-arg value="12345678"></constructor-arg>
+						<constructor-arg value="50000"></constructor-arg>
+					</bean>
+				</entry>
+				<entry key="22334455">
+					<bean class="Practise.WalletApp.Account">
+						<constructor-arg value="John"></constructor-arg>
+						<constructor-arg value="22334455"></constructor-arg>
+						<constructor-arg value="40000"></constructor-arg>
+					</bean>
+				</entry>
+			</map>
+		</constructor-arg>
+	</bean>
+</beans>
