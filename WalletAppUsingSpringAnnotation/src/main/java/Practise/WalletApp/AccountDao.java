@@ -49,9 +49,9 @@ public class AccountDao
 
     public String display()
     {
-	return "Balance of account "+ mobile + " is " + aWallet.getBalance();
+	return "Balance of account " + mobile + " is " + aWallet.getBalance();
     }
-    
+
     public BigDecimal getWalletBalance()
     {
 	return aWallet.getBalance();
