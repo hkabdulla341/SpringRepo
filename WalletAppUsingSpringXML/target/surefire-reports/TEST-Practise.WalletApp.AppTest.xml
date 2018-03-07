@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="28" failures="0" name="Practise.WalletApp.AppTest" time="1.217" errors="0" skipped="0">
+<testsuite tests="28" failures="0" name="Practise.WalletApp.AppTest" time="1.234" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\abdkamal\Documents\SpringEclipse\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1834403597294984584.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\abdkamal\Documents\SpringEclipse\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf226484569203904333.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\CapgeminiScripts\Support Tools\;C:\Program Files\Java\jdk1.8.0_151\bin;C:\Program Files\gradle-3.1-bin\gradle-3.1\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\abdkamal\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\abdkamal\AppData\Local\Microsoft\WindowsApps;C:\Users\abdkamal\AppData\Local\Programs\Git\cmd;&quot;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk1.7.0\bin&quot;;C:\Program Files\Java\jre1.8.0_131\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\abdkamal\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\temp\spring-tool-suite-3.9.2.RELEASE-e4.7.2-win32-x86_64\sts-bundle\sts-3.9.2.RELEASE;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,32 +61,32 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="WalletCreateAccount" name="duplicate account" time="0.528"/>
-  <testcase classname="WalletCreateAccount" name="invalid mobile number" time="0.031"/>
-  <testcase classname="WalletCreateAccount" name="invalid mobile number (non-numerical)" time="0.046"/>
-  <testcase classname="WalletCreateAccount" name="mobile number is null" time="0.047"/>
-  <testcase classname="WalletCreateAccount" name="amount is invalid" time="0.031"/>
-  <testcase classname="WalletCreateAccount" name="name is null" time="0.016"/>
-  <testcase classname="WalletCreateAccount" name="name is empty" time="0.03"/>
-  <testcase classname="WalletCreateAccount" name="name includes !@#$%^&amp;*(){}:;&quot;\|&lt;&gt;~`" time="0.031"/>
-  <testcase classname="WalletCreateAccount" name="Valid create account" time="0.015"/>
-  <testcase classname="WalletDeposit" name="mobile not found" time="0.062"/>
-  <testcase classname="WalletDeposit" name="invalid mobile number" time="0.016"/>
-  <testcase classname="WalletDeposit" name="invalid mobile number (non-numerical value)" time="0.031"/>
-  <testcase classname="WalletDeposit" name="mobile number is null" time="0.015"/>
-  <testcase classname="WalletDeposit" name="amount is invalid" time="0.031"/>
-  <testcase classname="WalletDeposit" name="amount is out of limits" time="0.016"/>
-  <testcase classname="WalletDeposit" name="WalletDepositValid" time="0.016"/>
-  <testcase classname="WalletShowBalance" name="mobile not found" time="0.031"/>
-  <testcase classname="WalletShowBalance" name="invalid mobile number" time="0.015"/>
-  <testcase classname="WalletShowBalance" name="invalid mobile number (Non-numberic)" time="0.016"/>
-  <testcase classname="WalletShowBalance" name="mobile number is null" time="0.031"/>
-  <testcase classname="WalletShowBalance" name="ShowBalanceValid" time="0.015"/>
-  <testcase classname="WalletWithdraw" name="mobile not found" time="0.016"/>
-  <testcase classname="WalletWithdraw" name="invalid mobile number" time="0.031"/>
-  <testcase classname="WalletWithdraw" name="invalid mobile number (non-numerical value)" time="0.016"/>
-  <testcase classname="WalletWithdraw" name="mobile number is null" time="0.031"/>
-  <testcase classname="WalletWithdraw" name="amount is invalid" time="0.007"/>
-  <testcase classname="WalletWithdraw" name="insufficient funds" time="0.031"/>
-  <testcase classname="WalletWithdraw" name="WalletWithdrawValid" time="0.015"/>
+  <testcase classname="WalletCreateAccount" name="duplicate account" time="0.566"/>
+  <testcase classname="WalletCreateAccount" name="invalid mobile number" time="0.072"/>
+  <testcase classname="WalletCreateAccount" name="invalid mobile number (non-numerical)" time="0.045"/>
+  <testcase classname="WalletCreateAccount" name="mobile number is null" time="0.049"/>
+  <testcase classname="WalletCreateAccount" name="amount is invalid" time="0.03"/>
+  <testcase classname="WalletCreateAccount" name="name is null" time="0.026"/>
+  <testcase classname="WalletCreateAccount" name="name is empty" time="0.026"/>
+  <testcase classname="WalletCreateAccount" name="name includes !@#$%^&amp;*(){}:;&quot;\|&lt;&gt;~`" time="0.029"/>
+  <testcase classname="WalletCreateAccount" name="Valid create account" time="0.027"/>
+  <testcase classname="WalletDeposit" name="mobile not found" time="0.033"/>
+  <testcase classname="WalletDeposit" name="invalid mobile number" time="0.021"/>
+  <testcase classname="WalletDeposit" name="invalid mobile number (non-numerical value)" time="0.017"/>
+  <testcase classname="WalletDeposit" name="mobile number is null" time="0.023"/>
+  <testcase classname="WalletDeposit" name="amount is invalid" time="0.025"/>
+  <testcase classname="WalletDeposit" name="amount is out of limits" time="0.018"/>
+  <testcase classname="WalletDeposit" name="WalletDepositValid" time="0.027"/>
+  <testcase classname="WalletShowBalance" name="mobile not found" time="0.025"/>
+  <testcase classname="WalletShowBalance" name="invalid mobile number" time="0.008"/>
+  <testcase classname="WalletShowBalance" name="invalid mobile number (Non-numberic)" time="0.021"/>
+  <testcase classname="WalletShowBalance" name="mobile number is null" time="0.015"/>
+  <testcase classname="WalletShowBalance" name="ShowBalanceValid" time="0.018"/>
+  <testcase classname="WalletWithdraw" name="mobile not found" time="0.022"/>
+  <testcase classname="WalletWithdraw" name="invalid mobile number" time="0.015"/>
+  <testcase classname="WalletWithdraw" name="invalid mobile number (non-numerical value)" time="0.014"/>
+  <testcase classname="WalletWithdraw" name="mobile number is null" time="0.015"/>
+  <testcase classname="WalletWithdraw" name="amount is invalid" time="0.017"/>
+  <testcase classname="WalletWithdraw" name="insufficient funds" time="0.014"/>
+  <testcase classname="WalletWithdraw" name="WalletWithdrawValid" time="0.016"/>
 </testsuite>

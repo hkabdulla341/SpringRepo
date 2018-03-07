@@ -12,7 +12,7 @@ public class WalletServiceDao implements WalletRepo
 	this.allAccounts = new HashMap<String, Account>();
     }
 
-    public WalletServiceDao(Map<String, Account> setAcct)
+    public WalletServiceDao(HashMap<String, Account> setAcct)
     {
 	this.allAccounts = setAcct;
     }
