@@ -1,0 +1,15 @@
+Practise\WalletApp\Account.class
+Practise\Utility\ServiceUtility.class
+Practise\WalletApp\Wallet.class
+Practise\WalletApp\WalletServiceDao.class
+Practice\WalletAppException\WalletException.class
+Practise\WalletApp\WalletService.class
+Practise\WalletApp\WalletServiceDB.class
+Practise\WalletApp\WalletDao.class
+Practise\Utility\Keyboard.class
+Practise\WalletApp\WalletRepo.class
+Practise\WalletApp\Testing.class
+Practise\Utility\UiUtility.class
+Practise\WalletApp\AccountDao.class
+Practice\Database\OracleDatabase.class
+Practise\WalletApp\WalletMainRun.class
