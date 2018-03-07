@@ -37,6 +37,7 @@ public class PageTwo extends HttpServlet
 	out.println("<title>Page One</title>");
 	out.println("</head>");
 	out.println("<body>");
+	out.println("<p>Your Session ID : " + request.getSession().toString() + " </p>");
 	out.println("<p>First Name : " + fName + " </p>");
 	out.println("<p>Last Name : " + lName +  " </p>");
 	String str = "fname=" + fName + "&lname=" + lName;

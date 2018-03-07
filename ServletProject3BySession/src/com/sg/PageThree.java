@@ -46,6 +46,7 @@ public class PageThree extends HttpServlet
 	out.println("<title>Page One</title>");
 	out.println("</head>");
 	out.println("<body>");
+	out.println("<p><b>Your Session ID : " + request.getSession().getId() + "</b></p>");
 	out.println("<p>First Name : " + fName + " </p>");
 	out.println("<p>Last Name : " + lName + " </p>");
 	out.println("<p>Phone : " + phone + " </p>");

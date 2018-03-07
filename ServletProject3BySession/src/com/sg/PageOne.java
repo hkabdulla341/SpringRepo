@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class PageOne
  */
-@WebServlet("/PageOne")
+@WebServlet("/")
 public class PageOne extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
@@ -32,6 +32,7 @@ public class PageOne extends HttpServlet
 	out.println("<title>Page One</title>");
 	out.println("</head>");
 	out.println("<body>");
+	out.println("<p><b>Your Session ID : " + request.getSession().getId() + "</b></p>");
 	out.println("<form name = 'frm' action = 'PageTwo' method=Post>");
 	out.println("<p>First Name : <input type = 'text' name = 'fname'/></p>");
 	out.println("<p>Last Name : <input type = 'text' name = 'lname'/></p>");

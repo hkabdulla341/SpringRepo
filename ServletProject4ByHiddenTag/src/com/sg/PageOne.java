@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class PageOne
  */
-@WebServlet("/PageOne")
+@WebServlet("/")
 public class PageOne extends HttpServlet
 {
     private static final long serialVersionUID = 1L;

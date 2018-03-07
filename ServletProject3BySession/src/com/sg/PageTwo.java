@@ -42,6 +42,7 @@ public class PageTwo extends HttpServlet
 	out.println("<title>Page One</title>");
 	out.println("</head>");
 	out.println("<body>");
+	out.println("<p><b>Your Session ID : " + request.getSession().getId() + "</b></p>");
 	out.println("<p>First Name : " + fName + " </p>");
 	out.println("<p>Last Name : " + lName +  " </p>");
 	out.println("<form name = 'frm2' action = '" + response.encodeURL("PageThree") + "' method=Post>");
