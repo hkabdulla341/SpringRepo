@@ -1,0 +1,21 @@
+Create Table Wallet
+(
+id integer,
+walletid integer,
+balance number(8,2),
+
+constraint PK_WALLETID primary key (id)
+);
+
+Create Table WalletAccount
+(
+id integer,
+accountid varchar(255),
+name varchar(255),
+mobile integer,
+walletID integer,
+
+constraint PK_ACCOUNTID primary key (id),
+constraint FK_WALLETID FOREIGN KEY (walletID)
+    REFERENCES WALLET(id) on delete cascade
+);
