@@ -12,6 +12,11 @@ public class WalletService
 {
     private WalletRepo aWalletServiceDao;
 
+    public WalletService()
+    {
+
+    }
+
     public WalletService(WalletRepo repo)
     {
 	this.aWalletServiceDao = repo;
@@ -112,6 +117,20 @@ public class WalletService
 	}
 
 	aWalletServiceDao.save(acc);
+
+	return new AccountDao(acc);
+    }
+
+    public AccountDao viewTransaction(String mobile)
+    {
+	ServiceUtility.isMobileValid(mobile);
+
+	Account acc = aWalletServiceDao.find(mobile);
+
+	if (acc.getName().equals("null"))
+	{
+	    throw new WalletException("Mobile number does not exist");
+	}
 
 	return new AccountDao(acc);
     }

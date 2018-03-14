@@ -16,7 +16,7 @@ import cucumber.api.java.en.When;
 
 public class WalletTestWithdraw
 {
-    AbstractApplicationContext ctx = new AnnotationConfigApplicationContext(RegisterSpring.class);
+    GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("WalletBeanConfig.xml");
     WalletService walletService = ctx.getBean("walletService", WalletService.class);
     boolean result;
 

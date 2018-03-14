@@ -17,7 +17,6 @@ public class UiUtility
 	{
 	    System.out.println(option.get(0));
 
-	    int len = option.get(0).length();
 	    UiUtility.printLine((option.get(0).length()) + 10);
 
 	    int optionAlpha = 0;

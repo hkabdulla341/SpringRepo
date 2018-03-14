@@ -60,6 +60,11 @@ public class Account
 	this.accountid = accountid2;
     }
 
+    public List<Transaction> getAllAccTxn()
+    {
+	return allAccTxn;
+    }
+
     public String getName()
     {
 	return name;

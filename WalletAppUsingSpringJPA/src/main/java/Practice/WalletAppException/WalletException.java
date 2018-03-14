@@ -1,5 +1,6 @@
 package Practice.WalletAppException;
 
+@SuppressWarnings("serial")
 public class WalletException extends RuntimeException
 {
     public WalletException(String message)

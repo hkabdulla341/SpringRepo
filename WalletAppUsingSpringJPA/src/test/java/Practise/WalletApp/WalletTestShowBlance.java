@@ -10,14 +10,13 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import Practice.WalletAppException.WalletException;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class WalletTestShowBlance
 {
-    AbstractApplicationContext ctx = new AnnotationConfigApplicationContext(RegisterSpring.class);
+    GenericXmlApplicationContext ctx = new GenericXmlApplicationContext("WalletBeanConfig.xml");
     WalletService walletService = ctx.getBean("walletService", WalletService.class);
     boolean result;
 

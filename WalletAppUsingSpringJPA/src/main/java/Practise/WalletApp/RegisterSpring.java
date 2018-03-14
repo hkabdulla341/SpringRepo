@@ -1,3 +1,4 @@
+/* For Class based on class configs*/
 package Practise.WalletApp;
 
 import javax.persistence.EntityManager;
@@ -13,13 +14,11 @@ import org.springframework.context.annotation.Configuration;
 public class RegisterSpring
 {
 
-    @Bean
-    public EntityManager em()
-    {
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
-
-	EntityManager ema = emf.createEntityManager();
-	return ema;
-    }
+    /*
+     * @Bean public EntityManager em() { EntityManagerFactory emf =
+     * Persistence.createEntityManagerFactory("hello");
+     * 
+     * EntityManager ema = emf.createEntityManager(); return ema; }
+     */
 
 }
