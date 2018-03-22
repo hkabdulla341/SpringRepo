@@ -1,5 +1,6 @@
 package walletApp;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -15,6 +16,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
+
 @Entity
 @Table(name = "Wall_Acct_Txn")
 public class Transaction
@@ -25,7 +28,7 @@ public class Transaction
     private int id;
 
     @Temporal(TemporalType.DATE)
-    private Calendar dateOfTransaction;
+    private Date dateOfTransaction;
     private String performedAction;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -40,7 +43,8 @@ public class Transaction
     public Transaction(String performedAction, Account account, String amount)
     {
 	super();
-	this.dateOfTransaction = new GregorianCalendar();
+//	this.dateOfTransaction = new GregorianCalendar();
+	this.dateOfTransaction = new Date();
 	this.balance = account.getaWallet().getBalance().toString();
 	this.performedAction = performedAction;
 	this.account = account;
@@ -49,7 +53,9 @@ public class Transaction
 
     public Date getDateOfTransaction()
     {
-	return dateOfTransaction.getTime();
+//	return dateOfTransaction.getTime();
+	
+	return dateOfTransaction;
     }
 
     public String getPerformedAction()
@@ -85,7 +91,7 @@ public class Transaction
     @Override
     public String toString()
     {
-	return "Date : " + dateOfTransaction.getTime() + " | Account : " + account.getMobile() + " | Action : "
+	return "Date : " + dateOfTransaction + " | Account : " + account.getMobile() + " | Action : "
 		+ performedAction + " | amount : $" + amount + " | balance : $" + balance;
     }
 }

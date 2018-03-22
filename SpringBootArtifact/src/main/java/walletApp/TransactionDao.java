@@ -1,5 +1,6 @@
 package walletApp;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class TransactionDao
@@ -40,7 +41,7 @@ public class TransactionDao
     @Override
     public String toString()
     {
-	return "Date : " + dateOfTransaction.getTime() + " | Action : " + performedAction + " | amount : $" + amount
+	return "Date : " + dateOfTransaction + " | Action : " + performedAction + " | amount : $" + amount
 		+ " | balance : $" + balance;
     }
 }

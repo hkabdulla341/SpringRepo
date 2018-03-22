@@ -15,15 +15,15 @@ public class WalletService
     @Autowired
     private WalletRepo aWalletServiceDao;
 
-    public WalletService()
-    {
-
-    }
-
-    public WalletService(WalletRepo repo)
-    {
-	this.aWalletServiceDao = repo;
-    }
+//    public WalletService()
+//    {
+//
+//    }
+//
+//    public WalletService(WalletRepo repo)
+//    {
+//	this.aWalletServiceDao = repo;
+//    }
 
     public AccountDao createAccount(String name, String mobile, String amount)
     {
