@@ -1,0 +1,6 @@
+projectKey=SpringBootArtifact
+serverUrl=http://localhost:9000
+serverVersion=6.7.2.37468
+dashboardUrl=http://localhost:9000/dashboard/index/SpringBootArtifact
+ceTaskId=AWJQ4MQDj5f0IZHFlPc8
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWJQ4MQDj5f0IZHFlPc8
